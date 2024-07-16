@@ -12,7 +12,7 @@ def get_news(api_link, api_key):
     sort_by = "popularity"
 
     articles = get_news(api_link, topic, from_date, sort_by, api_key)
-    # organize_date_to_write(articles)
+    organize_date_to_write(articles)
 
 
     url = f"{api_link}q={topic}&from={from_date}&sortBy={sort_by}&apiKey={api_key}"
