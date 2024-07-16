@@ -5,9 +5,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 def get_driver():
-
     options = webdriver.ChromeOptions()
-
     options.add_argument(
         "disable-maxized"
     )
@@ -28,3 +26,4 @@ def get_driver():
 
     driver.get("ttp://automated.pythonanywhere.com/login/")
     return driver
+
