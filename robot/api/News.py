@@ -5,7 +5,16 @@ import csv
 api_link = "https://newsapi.org/v2/everything?"
 api_key = "80423fcb354f45ea8fb17e14b61fc04a"
 
-def get_news(api_link, topic, from_date, sort_by, api_key):
+def get_news(api_link, api_key):
+
+    topic = input("Tópico: ")
+    from_date = input("A partir da data (formato YYYY-MM-DD): ")
+    sort_by = "popularity"
+
+    articles = get_news(api_link, topic, from_date, sort_by, api_key)
+    # organize_date_to_write(articles)
+
+
     url = f"{api_link}q={topic}&from={from_date}&sortBy={sort_by}&apiKey={api_key}"
     response = requests.get(url) 
 
